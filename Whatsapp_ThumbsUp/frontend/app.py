@@ -1,12 +1,14 @@
+import toml
 import streamlit as st
+config = toml.load("config.toml")
+theme_settings = config.get("theme", {})
+if "base" in theme_settings:
+    st.set_page_config(layout=theme_settings["base"])
+
 import sys
 sys.path.append(r'C:\Users\divya\Desktop\Whatsapp_ThumbsUp\backend')
 
-import toml
-config = toml.load("config.toml")
 
-# Access theme settings
-theme_settings = config.get("theme", {})
 
 import os
 import re
