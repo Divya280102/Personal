@@ -3,7 +3,10 @@ import sys
 sys.path.append(r'C:\Users\divya\Desktop\Whatsapp_ThumbsUp\backend')
 
 import toml
-toml.load("config.toml")
+config = toml.load("config.toml")
+
+# Access theme settings
+theme_settings = config.get("theme", {})
 
 import os
 import re
