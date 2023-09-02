@@ -2,6 +2,9 @@ import streamlit as st
 import sys
 sys.path.append(r'C:\Users\divya\Desktop\Whatsapp_ThumbsUp\backend')
 
+import toml
+config = toml.load("config.toml")
+
 import os
 import re
 from thumbs_up_counter import process_file, count_thumbs_up_emojis_for_date  # Updated import
