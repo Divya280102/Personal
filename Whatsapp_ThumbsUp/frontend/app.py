@@ -3,7 +3,7 @@ import sys
 sys.path.append(r'C:\Users\divya\Desktop\Whatsapp_ThumbsUp\backend')
 
 import toml
-config = toml.load("config.toml")
+toml.load("config.toml")
 
 import os
 import re
