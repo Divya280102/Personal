@@ -1,15 +1,6 @@
-import toml
 import streamlit as st
-config = toml.load("config.toml")
-theme_settings = config.get("theme", {})
-if "base" in theme_settings:
-    st.set_page_config(layout=theme_settings["base"])
-
 import sys
 sys.path.append(r'C:\Users\divya\Desktop\Whatsapp_ThumbsUp\backend')
-
-
-
 import os
 import re
 from thumbs_up_counter import process_file, count_thumbs_up_emojis_for_date  # Updated import
